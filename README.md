@@ -47,7 +47,7 @@
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- This Porject is not deployed yet.
+- Here is the link to the project https://mustafasamishirzad.github.io/to-do-list/dist/index.html
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
