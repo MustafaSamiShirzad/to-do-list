@@ -38,6 +38,12 @@ body {
   justify-content: center;
 }
 
+.title-div {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+}
+
 .list-container {
   display: flex;
   align-items: flex-start;
@@ -47,8 +53,63 @@ body {
   font-size: 2rem;
   padding: 5rem;
   border-radius: 0.8rem;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.314);
-}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,SAAA;AACJ;;AACA;EACI,gBAAA;AAEJ;;AAAA;EACI,YAAA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AAGJ;;AADA;EACI,aAAA;EACA,uBAAA;EACA,uBAAA;EACA,sBAAA;EACA,SAAA;EACA,eAAA;EACA,aAAA;EACA,qBAAA;EACA,6CAAA;AAIJ","sourcesContent":["*{\r\n    padding: 0;\r\n    margin: 0;\r\n}\r\nhtml{\r\n    font-size:62.8%;\r\n}\r\nbody{\r\n    width: 100vw;\r\n    height: 100vh;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n}\r\n.list-container{\r\n    display: flex;\r\n    align-items: flex-start;\r\n    justify-content: center;\r\n    flex-direction: column;\r\n    gap:2rem;\r\n    font-size:2rem;\r\n    padding:5rem;\r\n    border-radius:.8rem;\r\n    box-shadow:0px 1px 10px rgba(0, 0, 0, 0.314);\r\n}"],"sourceRoot":""}]);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  width: 30vw;
+}
+
+.input-holder {
+  width: 30vw;
+  padding: 0.5rem;
+  border: none;
+}
+
+.to-do-list-item,
+.input-div {
+  width: 30vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.to-do-list-item div {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.checkbox {
+  padding: 0.5rem;
+}
+
+.clear-all-button {
+  width: 30vw;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  border-style: none;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.gen-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.gen-btn:hover {
+  color: rgba(0, 0, 0, 0.503);
+}
+
+.clear-all-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.407);
+}`, "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,UAAA;EACA,SAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,YAAA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AACF;;AAEA;EACE,aAAA;EACA,8BAAA;EACA,WAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,uBAAA;EACA,sBAAA;EACA,SAAA;EACA,eAAA;EACA,aAAA;EACA,qBAAA;EACA,2CAAA;EACA,WAAA;AACF;;AAEA;EACE,WAAA;EACA,eAAA;EACA,YAAA;AACF;;AAEA;;EAEE,WAAA;EACA,gBAAA;EACA,aAAA;EACA,8BAAA;EACA,WAAA;EACA,iBAAA;AACF;;AAEA;EACE,aAAA;EACA,uBAAA;EACA,SAAA;AACF;;AAEA;EACE,eAAA;AACF;;AAEA;EACE,WAAA;EACA,mBAAA;EACA,iBAAA;EACA,kBAAA;EACA,mBAAA;EACA,eAAA;EACA,2CAAA;EACA,eAAA;EACA,oBAAA;AACF;;AAEA;EACE,YAAA;EACA,6BAAA;EACA,iBAAA;EACA,eAAA;AACF;;AAEA;EACE,2BAAA;AACF;;AAEA;EACE,YAAA;EACA,sCAAA;AACF","sourcesContent":["* {\r\n  padding: 0;\r\n  margin: 0;\r\n}\r\n\r\nhtml {\r\n  font-size: 62.8%;\r\n}\r\n\r\nbody {\r\n  width: 100vw;\r\n  height: 100vh;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n.title-div {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  width: 30vw;\r\n}\r\n\r\n.list-container {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  justify-content: center;\r\n  flex-direction: column;\r\n  gap: 2rem;\r\n  font-size: 2rem;\r\n  padding: 5rem;\r\n  border-radius: 0.8rem;\r\n  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);\r\n  width: 30vw;\r\n}\r\n\r\n.input-holder {\r\n  width: 30vw;\r\n  padding: 0.5rem;\r\n  border: none;\r\n}\r\n\r\n.to-do-list-item,\r\n.input-div {\r\n  width: 30vw;\r\n  list-style: none;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  gap: 0.4rem;\r\n  font-size: 1.5rem;\r\n}\r\n\r\n.to-do-list-item div {\r\n  display: flex;\r\n  justify-content: center;\r\n  gap: 1rem;\r\n}\r\n\r\n.checkbox {\r\n  padding: 0.5rem;\r\n}\r\n\r\n.clear-all-button {\r\n  width: 30vw;\r\n  margin-left: 0.5rem;\r\n  font-size: 1.5rem;\r\n  border-style: none;\r\n  border-radius: 1rem;\r\n  padding: 1rem 0;\r\n  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);\r\n  cursor: pointer;\r\n  transition: all 0.3s;\r\n}\r\n\r\n.gen-btn {\r\n  border: none;\r\n  background-color: transparent;\r\n  font-size: 1.4rem;\r\n  cursor: pointer;\r\n}\r\n\r\n.gen-btn:hover {\r\n  color: rgba(0, 0, 0, 0.503);\r\n}\r\n\r\n.clear-all-button:hover {\r\n  color: white;\r\n  background-color: rgba(0, 0, 0, 0.407);\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -493,6 +554,57 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/Modules/ulitems.js":
+/*!********************************!*\
+  !*** ./src/Modules/ulitems.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ul: () => (/* binding */ ul)
+/* harmony export */ });
+let ctr = 0;
+const arrayOfObj = [
+  {
+    description: 'Washing Dishes this morning',
+    complete: false,
+    index: ctr += 1,
+  },
+  {
+    description: 'Going to market',
+    complete: false,
+    index: ctr += 1,
+  },
+  {
+    description: 'Gym',
+    complete: false,
+    index: ctr += 1,
+  },
+  {
+    description: 'Going to School',
+    complete: false,
+    index: ctr += 1,
+  },
+];
+
+const func = () => {
+  const ul = [];
+  const li = document.createElement('li');
+  for (let i = 0; i < arrayOfObj.length; i += 1) {
+    li.innerHTML = `<li class="to-do-list-item"><div><button class="checkbox"></button>${arrayOfObj[i].description}</div><button class="vertical-ellipsis gen-btn">&#8942;</button></li>`;
+    ul.push(li.innerHTML);
+  }
+  const ulList = ul.join('<br>');
+  return ulList;
+};
+
+const ul = `<ul>${func()}</ul>`;
+
+
+
 /***/ })
 
 /******/ 	});
@@ -576,19 +688,19 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _Modules_ulitems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Modules/ulitems.js */ "./src/Modules/ulitems.js");
 
 
-const arrayOfObj = [
-    obj = {
-        description:'name',
-        complete:true,
-        index:1
-    },
-];
 
-console.log(document.querySelector(".input").value,"this text");
+const ulElement = document.createElement('ul');
+ulElement.innerHTML = _Modules_ulitems_js__WEBPACK_IMPORTED_MODULE_1__.ul;
+const clearAll = document.createElement('button');
+clearAll.classList.add('clear-all-button');
+clearAll.innerText = 'Clear all completed';
+document.querySelector('.list-container').append(ulElement, clearAll);
+
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle3eba5c562cc7ae713220.js.map
+//# sourceMappingURL=bundle16bb9d46088c01497209.js.map
