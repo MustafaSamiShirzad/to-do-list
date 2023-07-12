@@ -91,9 +91,10 @@ Example commands:
 Install this project with: git
 
 ### WebPack Plugins
--html-webpack-plugin
--sass css-loader style-loader sass-loader
--web dev server
+first initialize npm using npm init -y
+-html-webpack-plugin (write command npm i -D html-webpack-plugin)
+-sass css-loader style-loader sass-loader (write command npm i -D sass style-loader css-loader sass-loader)
+-web dev server (run for npm run dev for installation)
 ### Run tests
 
 To run tests, run the following command:
@@ -102,9 +103,11 @@ To run tests, run the following command:
 Example command:
 
 ```
-  npx hint .
-  npx stylelint "**/*.{css,scss}"
-  npx eslint .
+  create package.json by tying npm init -y
+  and then type these commands for linters Configuration also add files e.g(stylelintrc.json, .hintrc etc)
+  npx hint .(used to check HTML errors)
+  npx stylelint "**/*.{css,scss}" (used to check CSS errors)
+  npx eslint . (used to check JavaScript errors)
 ```
 ---
 

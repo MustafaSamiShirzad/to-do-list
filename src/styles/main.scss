@@ -25,10 +25,11 @@ body {
   padding: 5rem;
   border-radius: 0.8rem;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  width: 30vw;
 }
 
 .input-holder {
-  width: 100%;
+  width: 30vw;
   padding: 0.5rem;
 }
 
@@ -42,4 +43,14 @@ body {
 
 .checkbox {
   padding: 0.5rem;
+}
+
+.clear-all-button {
+  width: 30vw;
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  border-style: none;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
 }

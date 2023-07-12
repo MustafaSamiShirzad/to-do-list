@@ -1,23 +1,24 @@
+let ctr = 0;
 const arrayOfObj = [
   {
     description: 'Washing Dishes this morning',
     complete: false,
-    index: 1,
+    index: ctr += 1,
   },
   {
     description: 'Going to market',
     complete: false,
-    index: 2,
+    index: ctr += 1,
   },
   {
     description: 'Gym',
     complete: false,
-    index: 3,
+    index: ctr += 1,
   },
   {
     description: 'Going to School',
     complete: false,
-    index: 4,
+    index: ctr += 1,
   },
 ];
 
