@@ -37,9 +37,11 @@ body {
 .input-holder {
   width: 30vw;
   padding: 0.5rem;
+  border: none;
 }
 
-.to-do-list-item {
+.to-do-list-item,
+.input-div {
   width: 30vw;
   list-style: none;
   display: flex;
@@ -66,4 +68,22 @@ body {
   border-radius: 1rem;
   padding: 1rem 0;
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.gen-btn {
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.gen-btn:hover {
+  color: rgba(0, 0, 0, 0.503);
+}
+
+.clear-all-button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.407);
 }
