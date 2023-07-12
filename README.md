@@ -108,6 +108,9 @@ Example command:
   npx hint .(used to check HTML errors)
   npx stylelint "**/*.{css,scss}" (used to check CSS errors)
   npx eslint . (used to check JavaScript errors)
+  After installing the project, run the following command:
+  run npm i or npm install in your terminal to download all the packages needed to make the project run
+  run npm run dev to open the project in your browser
 ```
 ---
 

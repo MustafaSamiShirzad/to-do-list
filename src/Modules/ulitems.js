@@ -26,7 +26,7 @@ const func = () => {
   const ul = [];
   const li = document.createElement('li');
   for (let i = 0; i < arrayOfObj.length; i += 1) {
-    li.innerHTML = `<li class="to-do-list-item"><button class="checkbox"></button>${arrayOfObj[i].description}</li>`;
+    li.innerHTML = `<li class="to-do-list-item"><div><button class="checkbox"></button>${arrayOfObj[i].description}</div><span class="vertical-ellipsis">&#8942;</span></li>`;
     ul.push(li.innerHTML);
   }
   const ulList = ul.join('<br>');
