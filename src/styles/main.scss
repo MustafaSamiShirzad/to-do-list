@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.8%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 2rem;
+  padding: 5rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+}
+
+.input-holder {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.to-do-list-item {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.5rem;
+}
+
+.checkbox {
+  padding: 0.5rem;
+}
