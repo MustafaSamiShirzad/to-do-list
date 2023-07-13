@@ -1,3 +1,5 @@
+$box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+
 * {
   padding: 0;
   margin: 0;
@@ -30,8 +32,9 @@ body {
   font-size: 2rem;
   padding: 5rem;
   border-radius: 0.8rem;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  box-shadow: $box-shadow;
   width: 30vw;
+  margin-top: 4rem;
 }
 
 .input-holder {
@@ -40,34 +43,52 @@ body {
   border: none;
 }
 
-.to-do-list-item,
-.input-div {
+.to-do-list-item {
   width: 30vw;
   list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 0.4rem;
   font-size: 1.5rem;
+  margin: 2rem 0;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.064);
+  padding-bottom: 1rem;
 }
 
-.to-do-list-item div {
+.input-div {
+  width: 29vw;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+  font-size: 1.5rem;
+  box-shadow: $box-shadow;
+  padding: 1rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.checkbox-and-description {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
 .checkbox {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.722);
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: $box-shadow;
+  font-size: 1rem;
 }
 
 .clear-all-button {
   width: 30vw;
-  margin-left: 0.5rem;
   font-size: 1.5rem;
   border-style: none;
   border-radius: 1rem;
   padding: 1rem 0;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.314);
+  box-shadow: $box-shadow;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -77,10 +98,17 @@ body {
   background-color: transparent;
   font-size: 1.4rem;
   cursor: pointer;
+  font-weight: 1000;
+  color: rgba(0, 0, 0, 0.315);
+}
+
+.vertical-ellipsis {
+  position: relative;
+  left: 24.5vw;
 }
 
 .gen-btn:hover {
-  color: rgba(0, 0, 0, 0.503);
+  color: rgb(0, 0, 0);
 }
 
 .clear-all-button:hover {
