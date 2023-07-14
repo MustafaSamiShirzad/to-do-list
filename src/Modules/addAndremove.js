@@ -1,74 +1,50 @@
-const demo = () => {
-  let value = 0;
-  const array = [];
-  const btnArray = [];
-  let i = 0;
-  let id = 10000;
-  const inputHolder = document.querySelector('.input-holder');
-  inputHolder.addEventListener('keyup', (event) => {
+const inputBox = document.getElementById('input-box');
+const listContainer = document.getElementById('list-container');
+const addTask = () => {
+  if (inputBox.value === '') {
+    inputBox.placeholder = 'Enter your task';
+  } else {
     const li = document.createElement('li');
-    li.className = 'to-do-list-item';
-    const ulElement = document.querySelector('.li-item-container');
-    if (event.keyCode === 13 && inputHolder.value.trim().length > 0) {
-      const obj = {
-        description: inputHolder.value,
-        complete: false,
-        index: (value += 1),
-      };
-      array.push(obj);
-      const div = document.createElement('div');
-      const listDescription = document.createElement('label');
-      listDescription.className = 'list-description';
-      div.classList.add('checkbox-and-description');
-      const checkbox = document.createElement('button');
-      checkbox.type = 'checkbox';
-      checkbox.className = 'checkbox';
-      div.appendChild(checkbox);
-      const idValue = `cb${id += 1}`;
-      li.id = idValue;
-
-      listDescription.innerHTML = array[i++].description;
-      listDescription.classList.add(false);
-      localStorage.setItem(idValue, inputHolder.value);
-      div.appendChild(listDescription);
-      listDescription.addEventListener('click', () => {
-        listDescription.contentEditable = true;
-        listDescription.focus();
-      });
-      const button = document.createElement('button');
-      button.className = 'vertical-ellipsis gen-btn';
-      button.innerHTML = '&#8942;';
-      div.appendChild(button);
-      li.appendChild(div);
-      // ****************check box event listener******************
-      checkbox.addEventListener('click', () => {
-        checkbox.innerHTML = '&#10003;';
-        checkbox.style.color = 'white';
-        checkbox.style.backgroundColor = 'blue';
-        checkbox.classList.add('active');
-        listDescription.style.textDecoration = 'line-through';
-        setTimeout(() => {
-          li.style.display = 'none';
-        }, 1000);
-        btnArray.push(li.id);
-        // ****************another function for trigerring*****************
-        checkbox.addEventListener('click', () => {
-          div.style.textDecoration = 'none';
-          checkbox.innerHTML = '';
-          checkbox.style.backgroundColor = 'white';
-        });
-      });
-      document
-        .querySelector('.clear-all-button')
-        .addEventListener('click', () => {
-          btnArray.forEach((btn) => {
-            document.getElementById(btn).style.display = 'none';
-          });
-        });
-      li.style.listStyle = 'none';
-      ulElement.appendChild(li);
-      inputHolder.value = '';
-    }
-  });
+    li.innerHTML = inputBox.value;
+    listContainer.appendChild(li);
+    const span = document.createElement('span');
+    span.innerHTML = '\u00d7';
+    const button = document.createElement('button');
+    button.className = 'editBtn';
+    button.innerHTML = 'edit';
+    li.appendChild(span);
+    button.addEventListener('click', () => {
+      const newValue = window.prompt('Enter your value ');
+      li.innerHTML = newValue;
+      li.appendChild(span);
+      li.appendChild(button);
+      saveData();
+    });
+    li.appendChild(button);
+  }
+  inputBox.value = '';
+  saveData();
 };
-export { demo };
+
+listContainer.addEventListener('click', (e) => {
+  if (e.target.tagName === 'LI') {
+    e.target.classList.toggle('checked');
+    saveData();
+  } else if (e.target.tagName === 'SPAN') {
+    e.target.parentElement.remove();
+    saveData();
+  }
+}, false);
+const saveData = () => {
+  localStorage.setItem('data', listContainer.innerHTML);
+};
+
+const showTask = () => {
+  listContainer.innerHTML = localStorage.getItem('data');
+};
+showTask();
+document.querySelector('.add-btn').addEventListener('click', () => {
+  addTask();
+});
+
+export { addTask };

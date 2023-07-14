@@ -1,4 +1,4 @@
 import './styles/main.scss';
-import { demo } from './Modules/addAndremove.js';
+import { addTask } from './Modules/addAndremove.js';
 
-demo();
+addTask();
