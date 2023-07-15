@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+h2 {
+  font-family: cursive;
+  text-decoration: underline;
+}
+
+.todo-app {
+  width: 100%;
+  max-width: 540px;
+  background-color: white;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
+  margin: 100px auto;
+  padding: 40px 30px 70px;
+  border-radius: 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.062);
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+}
+
+button {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.129);
+  outline: none;
+  padding: 15px 40px;
+  background-color: rgba(63, 70, 63, 0.511);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.edit-btn {
+  // background-color:black;
+  width: 10px;
+  position: absolute;
+  right: 34px;
+  height: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 15px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.205);
+  top: 12px;
+  left: 8px;
+}
+
+ul li.completed {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.completed::before {
+  content: '✓';
+  text-align: center;
+  font-weight: 1000;
+  color: purple;
+  font-size: 20px;
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  color: rgba(0, 0, 0, 0.405);
+}
+
+.clear-all {
+  width: 100%;
+  position: relative;
+  top: 40px;
+}
