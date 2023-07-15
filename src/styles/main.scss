@@ -59,7 +59,7 @@ button {
   border-radius: 30px;
 }
 
-.editBtn {
+.edit-btn {
   // background-color:black;
   width: 10px;
   position: absolute;
@@ -92,12 +92,12 @@ ul li::before {
   left: 8px;
 }
 
-ul li.checked {
+ul li.completed {
   color: #555;
   text-decoration: line-through;
 }
 
-ul li.checked::before {
+ul li.completed::before {
   content: '✓';
   text-align: center;
   font-weight: 1000;
