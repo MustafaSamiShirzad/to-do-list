@@ -1,4 +1,5 @@
 import './styles/main.scss';
+import { clearTasks } from './Modules/clearTasks.js';
 
 let tasks = [];
 let listContainer;
@@ -83,12 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
     showTasks(listContainer);
   });
 
-  clearButton.addEventListener('click', () => {
-    // Filter out the checked tasks from the tasks array
-    tasks = tasks.filter((task) => !task.complete);
-    saveData(tasks);
-    showTasks(listContainer, tasks);
-  });
+  
+clearButton.addEventListener('click', () => {
+  clearTasks(tasks, saveData, showTasks, listContainer);
+});
+
 });
 
 const showTasks = (listContainer) => {
